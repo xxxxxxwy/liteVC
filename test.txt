@@ -1,0 +1,28 @@
+//计算组合数公式 
+int jiecheng(int temp)
+{
+int i;
+int result_t;
+result_t=1;
+for(i=1;i=i+1;i<=temp)
+{
+result_t=result_t*i;
+}
+return result_t;
+}
+
+void main()
+{
+int m;
+int n;
+int p;
+int fenzi,fenmu;
+int result;
+m=10;
+n=3;
+fenzi=jiecheng(m);
+p=m-n;
+fenmu=jiecheng(n)*jiecheng(p);
+result=fenzi/fenmu;
+show<<result;
+}

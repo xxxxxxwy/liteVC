@@ -1,0 +1,115 @@
+//直角三角形案例
+
+int pow(int dishu, int zhishu)
+{int i, result;
+result = 1;
+for (i = 0; i = i + 1; i < zhishu)
+{
+result = result * dishu;
+}
+return result;
+}
+int triangle(int r1, int r2)
+{
+int r3;
+r3 = pow(r1, 2) + pow(r2, 2);
+return r3;
+}
+void main()
+{
+int a, b, c;
+a = 5;
+b = 12;
+c = triangle(a, b);
+show << c;
+}
+
+
+
+//判断是不是质数 10000以内
+
+int judge(int a)
+{
+int i,j,k;
+int temp;
+i=0;j=0;k=0;temp=1;
+for(i=2;i=i+1;i<=100)
+{
+      for(j=2;j=j+1;j<=100)
+    {
+     k=i*j;
+if(k==a){temp=0;break;}
+    }
+}
+return temp;
+
+
+}
+
+void main()
+{
+int result,b;
+b=996;
+result=judge(b);
+show<<result;
+}
+
+
+
+//计算obj是2的几次方 1024以内 不是则输出0
+int pow(int dishu, int zhishu)
+{int i, result;
+result = 1;
+for (i = 0; i = i + 1; i < zhishu)
+{
+result = result * dishu;
+}
+return result;
+}
+
+void main()
+{
+int j;
+int obj;
+int result1;
+result1=0;
+obj=256;
+for(j=1;j=j+1;j<11)
+{
+if(obj==pow(2,j)){result1=j;break;}
+}
+show<<result1;
+
+
+}
+
+//计算组合数公式 
+int jiecheng(int temp)
+{
+int i;
+int result_t;
+result_t=1;
+for(i=1;i=i+1;i<=temp)
+{
+result_t=result_t*i;
+}
+return result_t;
+}
+
+void main()
+{
+int m;
+int n;
+int p;
+int fenzi,fenmu;
+int result;
+m=10;
+n=3;
+fenzi=jiecheng(m);
+p=m-n;
+fenmu=jiecheng(n)*jiecheng(p);
+result=fenzi/fenmu;
+show<<result;
+}
+
+
